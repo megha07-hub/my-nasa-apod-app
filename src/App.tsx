@@ -17,7 +17,6 @@ const App: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [apodData, setApodData] = useState<ApodData | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [galleryData, setGalleryData] = useState<ApodData[]>([]);
 
   useEffect(() => {
     const fetchApodData = async () => {
@@ -65,17 +64,6 @@ const App: React.FC = () => {
           <p>Date: {apodData.date}</p>
         </>
       )}
-      <div className="gallery">
-        {galleryData.map((item, index) => (
-          <div key={index} className="gallery-item">
-            <div><b>Captured Date: {item.date}</b></div>
-            <img src={item.url} alt={item.title} />
-            <h3>{item.title}</h3>
-            <p>{item.explanation}</p>
-            <hr />
-          </div>
-        ))}
-      </div>
     </div>   
   );
 };
