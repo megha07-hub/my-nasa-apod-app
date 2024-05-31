@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import './DatePickerStyles.css'; 
 import './App.css';
 
 interface ApodData {
@@ -48,12 +49,14 @@ const App: React.FC = () => {
     <div className="App">
       <h1>NASA Astronomy Picture of the Day</h1>
       <div className="search-container">
-        <h3>Filter Image By Date
+      <div className="custom-datepicker">  
+      <b id='text'>Filter Image By Date</b>
         <DatePicker
           selected={selectedDate}
           onChange={(date: Date) => setSelectedDate(date)}
           dateFormat="yyyy-MM-dd"
-        /></h3>
+        />
+      </div>
       </div>
       {error && <div className="error">Error: {error}</div>}
       {apodData && (

@@ -1,22 +1,25 @@
 .App {
+  width: 100%;
   text-align: center;
-  width: 80%;
+  align-content: center;
+  background-color: #100f0f;
 }
 
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
   align-content: center;
+  color: white;
+}
+
+#text {
+  color: white;
 }
 
 .search-container {
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-}
-
-.react-datepicker-wrapper {
-  width: 200px; 
 }
 
 img {
@@ -31,12 +34,14 @@ img {
 h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: white;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 10px;
+  color: white;
 }
 
 .error {
@@ -44,15 +49,3 @@ p {
   font-weight: bold;
 }
 
-.gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-  .gallery-item {
-    flex-basis: calc(50% - 20px);
-  }
-}
